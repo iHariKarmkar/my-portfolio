@@ -1,0 +1,161 @@
+.navbar {
+    width: 100vw;
+    height: 3rem;
+    background-color: var(--grey10);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.menu-item a {
+    position: relative;
+    color: var(--grey70);
+    transition: .3s;
+}
+
+.menu-item a:hover {
+    color: var(--primary100);
+}
+
+.menu-item a.active {
+    color: var(--primary100);
+    position: relative;
+}
+
+.menu-item a.active::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary100);
+}
+
+.menu-item a::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary100);
+    color: var(--primary100);
+    transition: .3s;
+}
+
+.menu-item a:hover::before {
+    width: 100%;
+    color: var(--primary100);
+}
+
+.hamburger {
+    width: 24px;
+    display: none;
+}
+
+.hamburger span{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--grey100);
+    transition: .3s ease-in;
+}
+.hamburger span::before{
+    display: block;
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 0;
+    width: 150%;
+    height: 2px;
+    background-color: var(--grey100);
+    transition: .5s ease-in-out
+}
+.hamburger span::after{
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    width: 150%;
+    height: 2px;
+    background-color: var(--grey100);
+    transition: .5s ease-in-out
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: space-between;
+        position: relative;
+        padding: 0 1.2rem;
+    }
+
+    .logo img {
+        height: 16px;
+    }
+
+    .menu {
+        z-index: -11;
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 2rem;
+        background-color: var(--secondary60);
+        top: 3rem;
+        left: 0;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform .3s ease-in-out;
+    }
+    .menu-items {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .show{
+        transform: translateY(0);
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.cross span {
+        background: transparent;
+        transition: .3s ease-in;
+    }
+    .hamburger.cross span::before {
+        top: 0;
+        transform: rotate(45deg);
+        transition: .5s ease-in-out;
+    }
+    .hamburger.cross span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: .5s ease-in-out;
+    }
+}
