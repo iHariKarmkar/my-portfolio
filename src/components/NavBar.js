@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import logo from "../assets/HariKarmkar.svg";
 import classes from "./NavBar.module.css";
 import {} from "react-icons/fa";
+import Resume from "../assets/HariKumarKarmkar_shivalikCollege.pdf";
 
 const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -41,7 +42,7 @@ const NavBar = () => {
               <a href="#">Contact</a>
             </li>
           </ui>
-          <button className="btn">Download CV</button>
+          <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">Download CV</a>
         </div>
         
         <div
