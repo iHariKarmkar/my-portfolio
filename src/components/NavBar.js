@@ -10,52 +10,83 @@ const NavBar = () => {
     setNavToggle((prev) => !prev);
     console.log(navToggle);
   };
-
+  const [menu, setMenu] = useState("home");
   return (
     <Fragment>
       <nav className={classes.navbar}>
-        <a href="#" className={classes.logo}>
-          <img src={logo} alt="iHariKarmkar" />
-        </a>
-        <div
-          className={
-            navToggle ? `${classes.menu} ${classes.show}` : `${classes.menu}`
-          }
-        >
-      
-          <ui className={classes["menu-items"]}>
-            <li className={classes["menu-item"]}>
-              <a className={classes.active} href="#">
-                Home
-              </a>
-            </li>
-            <li className={classes["menu-item"]}>
-              <a href="#">About</a>
-            </li>
-            <li className={classes["menu-item"]}>
-              <a href="#">Skills</a>
-            </li>
-            <li className={classes["menu-item"]}>
-              <a href="#">Portfolio</a>
-            </li>
-            <li className={classes["menu-item"]}>
-              <a href="#">Contact</a>
-            </li>
-          </ui>
-          <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">Download CV</a>
+        <div className={`${classes.container} ${classes.navContainer}`}>
+          <a href="#" className={classes.logo}>
+            <img src={logo} alt="iHariKarmkar" />
+          </a>
+          <div
+            className={
+              navToggle ? `${classes.menu} ${classes.show}` : `${classes.menu}`
+            }
+          >
+            <ui className={classes["menu-items"]}>
+              <li className={classes["menu-item"]}>
+                <a
+                  onClick={()=>{setMenu("home"); toggleMenu()}}
+                  className={menu === "home" ? classes.active : ""}
+                  href="#"
+                >
+                  Home
+                </a>
+              </li>
+              <li className={classes["menu-item"]}>
+                <a
+                  onClick={()=>{setMenu("skills"); toggleMenu()}}
+                  className={menu === "skills" ? classes.active : ""}
+                  href="#skills"
+                >
+                  Skills
+                </a>
+              </li>
+              <li className={classes["menu-item"]}>
+                <a
+                  onClick={()=>{setMenu("portfolio"); toggleMenu()}}
+                  className={menu === "portfolio" ? classes.active : ""}
+                  href="#"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li className={classes["menu-item"]}>
+                <a
+                  onClick={()=>{setMenu("about"); toggleMenu()}}
+                  className={menu === "about" ? classes.active : ""}
+                  href="#"
+                >
+                  About
+                </a>
+              </li>
+              <li className={classes["menu-item"]}>
+                <a
+                  onClick={()=>{setMenu("contact"); toggleMenu()}}
+                  className={menu === "contact" ? classes.active : ""}
+                  href="#"
+                >
+                  Contact
+                </a>
+              </li>
+            </ui>
+            <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">
+              Download CV
+            </a>
+          </div>
+
+          <div
+            className={
+              navToggle
+                ? `${classes.hamburger} ${classes.cross}`
+                : `${classes.hamburger}`
+            }
+            onClick={toggleMenu}
+          >
+            <span></span>
+          </div>
         </div>
-        
-        <div
-          className={
-            navToggle
-              ? `${classes.hamburger} ${classes.cross}`
-              : `${classes.hamburger}`
-          }
-          onClick={toggleMenu}
-        >
-          <span></span>
-        </div>
-      </nav>
+      </nav>8n
     </Fragment>
   );
 };

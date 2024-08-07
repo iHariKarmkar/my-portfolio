@@ -1,0 +1,131 @@
+.hero {
+    margin-top: -3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.leftSide {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--heading);
+    position: relative;
+    z-index: -1;
+}
+
+.title>span {
+    color: var(--primary100);
+}
+
+.title::before {
+    position: absolute;
+    content: "Hello there, welcome to my portfolio.";
+    font-size: .75rem;
+    text-transform: uppercase;
+    top: -18px;
+    letter-spacing: 1px;
+    color: var(--primary50);
+    /* color: var(--secondary100); */
+}
+
+.hero-text{
+    width: 400px;
+    color: var(--grey50);
+}
+
+.cta {
+    margin: 3rem 0;
+}
+
+.ctaButton {
+    padding: 12px 18px;
+}
+
+.ctaAlt {
+    background-color: var(--secondary100);
+    color: var(--primary100);
+    margin-left: 10px;
+}
+
+.ctaAlt:hover {
+    background-color: var(--secondary60);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+
+}
+.icon{
+    font-size: 1.5rem;
+    color: var(--primary70);
+    transition: .3s;
+}
+
+.icon:hover {
+    color: var(--primary100);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.image-wrapper {
+    height: 400px;
+    width: 400px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 150px; */
+}
+
+@media (max-width: 600px) {
+
+    .hero{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .image-wrapper{
+        width: 200px;
+        height: 200px;
+    }
+.leftSide{
+    align-items: center;
+}
+    .title{
+        font-size: 2rem;
+    }
+
+    .title::before {
+       font-size: .5rem;
+       top: -12px;
+    }
+
+    .hero-text {
+        padding: 0 12px;
+    }
+    .scroll{
+        bottom: 80px;
+        transform: translateX(-50%);
+    }
+}

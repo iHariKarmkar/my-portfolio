@@ -1,0 +1,53 @@
+.skills-bar{
+    width: 500px;
+}
+
+.bar {
+    margin-top: 1.25rem;
+}
+.info span {
+    font-weight: 500;
+    color: var(--heading);
+}
+.progress-line{
+    height: 8px;
+    width: 100%;
+    background-color: var(--grey30);
+    border-radius: 8px;
+    position: relative;
+}
+
+.progress-line span{
+    width: 60%;
+    background-color: var(--primary100);
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+}
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: var(--secondary100);
+
+}
+
+.progress-line span::after {
+    position: absolute;
+    content: attr(data-percent);
+    /* content: "90%"; */
+    right: 0;
+    top: -23px;
+    font-size: .7rem;
+    font-weight: 500;
+    background: var(--secondary100);
+    color: var(--primary100);
+    padding: 2px 6px;
+    border-radius: 6px;
+}

@@ -1,12 +1,21 @@
-.navbar {
-    width: 100vw;
+.navbar{
     height: 3rem;
     background-color: var(--grey10);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    position: sticky;
-    box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    filter: blur(100);
+    z-index: 999;
+    
+}
+.navContainer {
+    width: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo img {
@@ -105,13 +114,24 @@
     transition: .5s ease-in-out
 }
 
+.backdrop{
+    background-color: var(--grey10);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    z-index: 10;
+    filter: blur(300);
+    opacity: .5;
+}
 
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
     .navbar {
         justify-content: space-between;
-        position: relative;
+        position: sticky;
         padding: 0 1.2rem;
     }
 
@@ -120,7 +140,6 @@
     }
 
     .menu {
-        z-index: -11;
         display: flex;
         gap: 2rem;
         padding: 2rem 2rem;
@@ -131,8 +150,9 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         transition: transform .3s ease-in-out;
+        z-index: -99;
     }
     .menu-items {
         flex-direction: column;

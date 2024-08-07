@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.skills-bar {
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.bar:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+.info span {
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.progress-line {
+    margin-top: 5px;
+    height: 8px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 8px;
+    position: relative;
+}
+
+.progress-line span {
+    width: 60%;
+    background-color: red;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;;
+
+}
+
+.progress-line span::after {
+    position: absolute;
+    content: attr(data-percent);
+    /* content: "90%"; */
+    right: 0;
+    top: -23px;
+    font-size: .7rem;
+    font-weight: 500;
+    background: #000;;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 6px;
+}

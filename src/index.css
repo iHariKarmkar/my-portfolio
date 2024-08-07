@@ -2,12 +2,12 @@
 
 :root {
   --primary50: #bface1;
-  --primary70: #997acf;
+  --primary70: #9266de;
   --primary100: #5821b8;
   --primary200: #572f9c;
   --secondary30: #fbfaf4;
   --secondary60: #efebd1;
-  --secondary100: #d6cc8d;
+  --secondary100: #ede196;
   --grey10: #f0f0f0;
   --grey30: #c3c3c3;
   --grey50: #969696;
@@ -23,6 +23,22 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary50);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--primary100);
+  border-radius: 8px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -34,6 +50,7 @@ body {
 }
 
 .btn{
+  cursor: pointer;
   background-color: var(--primary100);
   padding: 8px 18px;
   outline: none;
@@ -48,5 +65,34 @@ body {
 .btn:hover{
   background-color: var(--primary200);
 }
+
+.container{
+  width: 1150px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.sub-heading {
+  color: var(--heading);
+  padding-top: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.sub-heading span {
+  color: var(--primary100);
+}
+
+/* .sub-heading::before{
+  position: absolute;
+  content: "what i know";
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary50);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 2;
+} */
 
 

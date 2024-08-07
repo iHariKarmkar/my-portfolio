@@ -1,0 +1,19 @@
+.heading {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.heading span {
+    color: var(--primary100);
+}
+
+.heading-text {
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    color: var(--primary50);
+    transform: translateX(-50%);
+    font-size: .75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
