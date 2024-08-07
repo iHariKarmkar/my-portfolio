@@ -86,7 +86,7 @@ const NavBar = () => {
             <span></span>
           </div>
         </div>
-      </nav>8n
+      </nav>
     </Fragment>
   );
 };
