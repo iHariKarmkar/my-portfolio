@@ -1,0 +1,15 @@
+.tag{
+    background-color: var(--secondary100);
+    padding: .5rem .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--heading);
+    font-weight: 500;
+    border-radius: 24px;
+}
+
+.icon {
+    color: var(--primary100);
+}

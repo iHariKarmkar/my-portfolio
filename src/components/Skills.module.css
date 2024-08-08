@@ -10,5 +10,26 @@
 }
 
 .skills-left img{
-    height: 350px;
+    height: 30vw;
+}
+
+.tag-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .skill-content{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills-left img{
+        /* display: none; */
+        height: 50vw;
+    }
 }
