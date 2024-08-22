@@ -10,7 +10,7 @@
 }
 
 .skills-left img{
-    height: 30vw;
+    height: 20vw;
 }
 
 .tag-list{
@@ -21,15 +21,26 @@
     gap: 1rem;
     margin-top: 2rem;
 }
+.tags {
+    margin-top: 4rem;
+}
+.tags h4 {
+    text-align: center;
+    font-size: 1.25rem;
+}
 
 @media (max-width: 600px) {
     .skill-content{
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .skills-left img{
-        /* display: none; */
-        height: 50vw;
+        display: none;
+        /* height: 50vw; */
+    }
+
+    .tags{
+        margin-top: 8rem;
     }
 }

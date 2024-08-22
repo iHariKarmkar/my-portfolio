@@ -36,7 +36,7 @@ const SkillBar = () => {
   return (
     <div>
         {skillData.map(skill => {
-            return <SkillPercent title={skill.title} dataPercent={skill.percent} percent={skill.percent}/>
+            return <SkillPercent key={skill.title} title={skill.title} dataPercent={skill.percent} percent={skill.percent}/>
         })}
     </div>
   )

@@ -1,0 +1,18 @@
+.portfolio-section{
+    height: 100vh;
+}
+
+.portfolio-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 600px) {
+    .portfolio-content {
+        flex-direction: column;
+    }
+}

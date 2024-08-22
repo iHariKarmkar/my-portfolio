@@ -23,7 +23,7 @@ const NavBar = () => {
               navToggle ? `${classes.menu} ${classes.show}` : `${classes.menu}`
             }
           >
-            <ui className={classes["menu-items"]}>
+            <ul className={classes["menu-items"]}>
               <li className={classes["menu-item"]}>
                 <a
                   onClick={()=>{setMenu("home"); toggleMenu()}}
@@ -46,7 +46,7 @@ const NavBar = () => {
                 <a
                   onClick={()=>{setMenu("portfolio"); toggleMenu()}}
                   className={menu === "portfolio" ? classes.active : ""}
-                  href="#"
+                  href="#portfolio"
                 >
                   Portfolio
                 </a>
@@ -69,7 +69,7 @@ const NavBar = () => {
                   Contact
                 </a>
               </li>
-            </ui>
+            </ul>
             <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">
               Download CV
             </a>

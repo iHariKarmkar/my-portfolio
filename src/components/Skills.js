@@ -4,6 +4,19 @@ import SubHeading from "./UI/SubHeading";
 import skillImg from "../assets/skills.svg";
 import SkillBar from "./UI/SkillBar";
 import SkillTag from "./UI/SkillTag";
+
+const skillTags = [
+  { name: "HTML" },
+  { name: "CSS" },
+  { name: "JS" },
+  { name: "ReactJS" },
+  { name: "NodeJS" },
+  { name: "ExpressJS" },
+  { name: "MongoDB" },
+  { name: "SQL" },
+  { name: "GitHub" },
+];
+
 const Skills = () => {
   return (
     <>
@@ -19,15 +32,13 @@ const Skills = () => {
             </div>
           </div>
         </div>
-        <div className={classes['tag-list']}>
-          <SkillTag tagTitle="HTML"/>
-          <SkillTag tagTitle="CSS"/>
-          <SkillTag tagTitle="JS"/>
-          <SkillTag tagTitle="ReactJS"/>
-          <SkillTag tagTitle="MongoDB"/>
-          <SkillTag tagTitle="GitHub"/>
-          <SkillTag tagTitle="SQL"/>
-          <SkillTag tagTitle="Tailwind"/>
+        <div className={classes.tags}>
+          <h4>Frameworks/Technologies</h4>
+          <div className={classes["tag-list"]}>
+            {skillTags.map((tag) => (
+              <SkillTag key={tag.name} tagTitle={tag.name} />
+            ))}
+          </div>
         </div>
       </div>
     </>

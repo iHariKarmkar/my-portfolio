@@ -60,10 +60,11 @@ body {
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 1px;
-  transition: all .3s;
+  transition: all .3s ease-in-out;
 }
 .btn:hover{
   background-color: var(--primary200);
+  transform: translateY(-2px);
 }
 
 .container{
