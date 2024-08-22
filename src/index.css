@@ -59,6 +59,7 @@ body {
   outline: none;
   border: none; 
   color: var(--grey10);
+  text-transform: capitalize;
   border-radius: 1rem;
   font-family: inherit;
   font-weight: 600;
@@ -68,6 +69,22 @@ body {
 .btn:hover{
   background-color: var(--primary200);
   transform: translateY(-2px);
+}
+
+.menu .active {
+  color: var(--primary100);
+  position: relative;
+}
+
+.menu .active::before {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 50%;
+  background-color: var(--primary100);
 }
 
 .container{
@@ -85,6 +102,10 @@ body {
 
 .sub-heading span {
   color: var(--primary100);
+}
+
+.sub-heading .invert{
+  color: var(--grey10);
 }
 
 /* .sub-heading::before{

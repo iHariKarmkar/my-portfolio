@@ -8,7 +8,7 @@ import ScrollArrow from "./UI/ScrollArrow";
 const Hero = () => {
   return (
     <Fragment>
-      <div className="container">
+      <div className="container" id="home">
         <div className={classes.hero}>
           <div className={classes.leftSide}>
             <h1 className={classes.title}>
@@ -31,6 +31,7 @@ const Hero = () => {
               <a
                 href="https://www.fiverr.com/s/1xo1Q0"
                 target="_blank"
+                rel="noreferrer"
                 className={`${classes.ctaButton} ${classes.ctaAlt} btn`}
               >
                 See Gigs
@@ -40,23 +41,24 @@ const Hero = () => {
               <a
                 href="https://www.linkedin.com/in/iHariKarmkar"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaLinkedin className={classes.icon} />
               </a>
-              <a href="https://www.github.com/iHariKarmkar" target="_blank">
+              <a href="https://www.github.com/iHariKarmkar" target="_blank" rel="noreferrer">
                 <FaGithub className={classes.icon} />
               </a>
-              <a href="https://www.instagram.com/iHariKarmkar" target="_blank">
+              <a href="https://www.instagram.com/iHariKarmkar" target="_blank" rel="noreferrer">
                 <FaInstagram className={classes.icon} />
               </a>
-              <a href="https://www.facebook.com/iHariKarmkar" target="_blank">
+              <a href="https://www.facebook.com/iHariKarmkar" target="_blank" rel="noreferrer">
                 <FaFacebook className={classes.icon} />
               </a>
             </div>
           </div>
           <div className={classes.rightSide}>
             <div className={classes["image-wrapper"]}>
-              <img src={heroImage} alt="Hero image" />
+              <img src={heroImage} alt="Hero" />
             </div>
           </div>
         </div>

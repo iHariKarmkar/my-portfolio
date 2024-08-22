@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
 import logo from "../assets/logo.svg";
-import logoIcon from '../assets/logoIcon.png'
 import classes from "./NavBar.module.css";
 import {} from "react-icons/fa";
 import Resume from "../assets/HariKumarKarmkar_shivalikCollege.pdf";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -11,64 +11,75 @@ const NavBar = () => {
     setNavToggle((prev) => !prev);
     console.log(navToggle);
   };
-  const [menu, setMenu] = useState("home");
   return (
     <Fragment>
       <nav className={classes.navbar}>
         <div className={`${classes.container} ${classes.navContainer}`}>
-          <a href="#" className={classes.logo}>
+          <Link to="home" className={classes.logo}>
             <img src={logo} alt="iHariKarmkar" />
-          </a>
+          </Link>
           <div
             className={
               navToggle ? `${classes.menu} ${classes.show}` : `${classes.menu}`
             }
           >
-            <ul className={classes["menu-items"]}>
+            <ul className={`${classes["menu-items"]} menu`}>
               <li className={classes["menu-item"]}>
-                <a
-                  onClick={()=>{setMenu("home"); toggleMenu()}}
-                  className={menu === "home" ? classes.active : ""}
-                  href="#"
+                <Link
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  duration={100}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className={classes["menu-item"]}>
-                <a
-                  onClick={()=>{setMenu("skills"); toggleMenu()}}
-                  className={menu === "skills" ? classes.active : ""}
-                  href="#skills"
+                <Link
+                activeClass="active" 
+                to="skills" 
+                spy={true} 
+                smooth={true}  
+                duration={100} 
                 >
                   Skills
-                </a>
+                </Link>
               </li>
               <li className={classes["menu-item"]}>
-                <a
-                  onClick={()=>{setMenu("portfolio"); toggleMenu()}}
-                  className={menu === "portfolio" ? classes.active : ""}
-                  href="#portfolio"
+                <Link
+                  activeClass="active" 
+                  to="portfolio" 
+                  spy={true} 
+                  smooth={true}  
+                  duration={100} 
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li className={classes["menu-item"]}>
-                <a
-                  onClick={()=>{setMenu("about"); toggleMenu()}}
-                  className={menu === "about" ? classes.active : ""}
-                  href="#about"
+                <Link
+                  activeClass="active" 
+                  to="about" 
+                  spy={true} 
+                  smooth={true}  
+                  duration={100} 
+                  // offset={10}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li className={classes["menu-item"]}>
-                <a
-                  onClick={()=>{setMenu("contact"); toggleMenu()}}
-                  className={menu === "contact" ? classes.active : ""}
-                  href="#"
+                <Link
+                 activeClass="active" 
+                 to="contact" 
+                 spy={true} 
+                 smooth={true}  
+                 duration={100} 
+                 offset={10}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">

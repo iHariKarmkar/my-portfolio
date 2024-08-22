@@ -26,3 +26,20 @@
 .right img {
     height: 20vw;
 }
+
+@media (max-width: 600px) {
+    .about-content {
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .right img {
+        height: 30vw;
+    }
+
+    .left{
+        width: 100%;
+    }
+}
