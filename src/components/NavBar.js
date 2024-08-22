@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
-import logo from "../assets/HariKarmkar.svg";
+import logo from "../assets/logo.svg";
+import logoIcon from '../assets/logoIcon.png'
 import classes from "./NavBar.module.css";
 import {} from "react-icons/fa";
 import Resume from "../assets/HariKumarKarmkar_shivalikCollege.pdf";
@@ -55,7 +56,7 @@ const NavBar = () => {
                 <a
                   onClick={()=>{setMenu("about"); toggleMenu()}}
                   className={menu === "about" ? classes.active : ""}
-                  href="#"
+                  href="#about"
                 >
                   About
                 </a>

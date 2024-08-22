@@ -4,18 +4,7 @@ import SubHeading from "./UI/SubHeading";
 import skillImg from "../assets/skills.svg";
 import SkillBar from "./UI/SkillBar";
 import SkillTag from "./UI/SkillTag";
-
-const skillTags = [
-  { name: "HTML" },
-  { name: "CSS" },
-  { name: "JS" },
-  { name: "ReactJS" },
-  { name: "NodeJS" },
-  { name: "ExpressJS" },
-  { name: "MongoDB" },
-  { name: "SQL" },
-  { name: "GitHub" },
-];
+import skillTags from "../utils/skillTag";
 
 const Skills = () => {
   return (

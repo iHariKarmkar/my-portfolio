@@ -27,8 +27,8 @@
 
 .title::before {
     position: absolute;
-    content: "Hello there, welcome to my portfolio.";
-    font-size: .75rem;
+    content: "Hello there,";
+    font-size: 1rem;
     text-transform: uppercase;
     top: -18px;
     letter-spacing: 1px;
@@ -117,7 +117,7 @@
     }
 
     .title::before {
-       font-size: .5rem;
+       font-size: .75rem;
        top: -12px;
     }
 

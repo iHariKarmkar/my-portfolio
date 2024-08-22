@@ -4,6 +4,7 @@
   --primary50: #bface1;
   --primary70: #9266de;
   --primary100: #5821b8;
+  /* --primary100: #a7de47; */
   --primary200: #572f9c;
   --secondary30: #fbfaf4;
   --secondary60: #efebd1;
@@ -15,6 +16,8 @@
   --grey90: #3c3c3c;
   --grey100: #0f0f0f;
   --heading: #0B0712;
+
+  --secondColor: #a7de47;
 
 }
 

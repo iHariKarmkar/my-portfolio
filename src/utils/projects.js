@@ -19,6 +19,22 @@ const projects = [
       type: "intermediate",
     },
     {
+      title: "TextUtils",
+      desc: "A text utility web app to work on text.",
+      img: textUtilImg,
+      github: "https://github.com/iHariKarmkar/textutils",
+      liveLink: "https://textutilsbyhk.netlify.app/",
+      type: "basic",
+    },
+    {
+      title: "Expense Tracker App",
+      desc: "Web app to track your expense.",
+      img: expenseImg,
+      github: "https://github.com/iHariKarmkar/expense-tracker-app",
+      liveLink: "https://expensetrackerbyhk.netlify.app/",
+      type: "intermediate",
+    },
+    {
       title: "Rock Paper Scissor",
       desc: "Play Rock Paper Scissor with an interactive UI.",
       img: rockPaperImg,
@@ -34,22 +50,7 @@ const projects = [
       liveLink: "",
       type: "intermediate",
     },
-    {
-      title: "Expense Tracker App",
-      desc: "Web app to track your expense.",
-      img: expenseImg,
-      github: "https://github.com/iHariKarmkar/expense-tracker-app",
-      liveLink: "https://expensetrackerbyhk.netlify.app/",
-      type: "intermediate",
-    },
-    {
-      title: "TextUtils",
-      desc: "A text utility web app to work on text.",
-      img: textUtilImg,
-      github: "https://github.com/iHariKarmkar/textutils",
-      liveLink: "https://textutilsbyhk.netlify.app/",
-      type: "basic",
-    },
+  
     {
       title: "ToDo App",
       desc: "Write your todos in an amazing UI.",
