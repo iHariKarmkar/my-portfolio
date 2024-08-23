@@ -82,7 +82,7 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <a href={Resume} download="HariKumarKarmkar_Resume" className="btn">
+            <a href="https://drive.google.com/file/d/1PDnHqZ3hYY2chtOnd0jjLZJ6TqBSdofz/view?usp=drive_link" className="btn">
               Download CV
             </a>
           </div>
