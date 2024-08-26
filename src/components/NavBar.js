@@ -2,7 +2,6 @@ import React, { Fragment, useState } from "react";
 import logo from "../assets/logo.svg";
 import classes from "./NavBar.module.css";
 import {} from "react-icons/fa";
-import Resume from "../assets/HariKumarKarmkar_shivalikCollege.pdf";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
@@ -31,6 +30,7 @@ const NavBar = () => {
                   spy={true}
                   smooth={true}
                   duration={100}
+                  onClick={toggleMenu}
                 >
                   Home
                 </Link>
@@ -42,6 +42,7 @@ const NavBar = () => {
                 spy={true} 
                 smooth={true}  
                 duration={100} 
+                onClick={toggleMenu}
                 >
                   Skills
                 </Link>
@@ -53,6 +54,7 @@ const NavBar = () => {
                   spy={true} 
                   smooth={true}  
                   duration={100} 
+                  onClick={toggleMenu}
                 >
                   Portfolio
                 </Link>
@@ -64,6 +66,7 @@ const NavBar = () => {
                   spy={true} 
                   smooth={true}  
                   duration={100} 
+                  onClick={toggleMenu}
                   // offset={10}
                 >
                   About
@@ -77,12 +80,13 @@ const NavBar = () => {
                  smooth={true}  
                  duration={100} 
                  offset={10}
+                 onClick={toggleMenu}
                 >
                   Contact
                 </Link>
               </li>
             </ul>
-            <a href="https://drive.google.com/file/d/1PDnHqZ3hYY2chtOnd0jjLZJ6TqBSdofz/view?usp=drive_link" className="btn">
+            <a href="https://drive.google.com/file/d/1PDnHqZ3hYY2chtOnd0jjLZJ6TqBSdofz/view?usp=drive_link" className="btn" onClick={toggleMenu}>
               Download CV
             </a>
           </div>
